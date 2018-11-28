@@ -123,7 +123,6 @@ internal final class ChangeEmailViewController: UIViewController {
 
     _ = self.passwordTextField
       |> settingsPasswordFormFieldStyle
-      |> \.textAlignment .~ .right
       |> \.returnKeyType .~ .done
       |> \.attributedPlaceholder %~ { _ in
         settingsAttributedPlaceholder(Strings.login_placeholder_password())

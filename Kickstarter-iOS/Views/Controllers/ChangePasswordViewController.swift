@@ -78,8 +78,6 @@ final class ChangePasswordViewController: UIViewController {
 
     _ = confirmNewPasswordTextField
       |> settingsPasswordFormFieldStyle
-      |> UITextField.lens.secureTextEntry .~ true
-      |> UITextField.lens.textAlignment .~ .right
       |> UITextField.lens.returnKeyType .~ .done
       |> \.attributedPlaceholder %~ { _ in
         settingsAttributedPlaceholder(Strings.login_placeholder_password())
@@ -91,8 +89,6 @@ final class ChangePasswordViewController: UIViewController {
 
     _ = currentPasswordTextField
       |> settingsPasswordFormFieldStyle
-      |> UITextField.lens.secureTextEntry .~ true
-      |> UITextField.lens.textAlignment .~ .right
       |> \.attributedPlaceholder %~ { _ in
         settingsAttributedPlaceholder(Strings.login_placeholder_password())
     }
@@ -109,8 +105,6 @@ final class ChangePasswordViewController: UIViewController {
 
     _ = newPasswordTextField
       |> settingsPasswordFormFieldStyle
-      |> UITextField.lens.secureTextEntry .~ true
-      |> UITextField.lens.textAlignment .~ .right
       |> \.attributedPlaceholder %~ { _ in
         settingsAttributedPlaceholder(Strings.login_placeholder_password())
     }
